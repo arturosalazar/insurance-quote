@@ -1,0 +1,84 @@
+<header>
+    <div class="container">
+      <a href="#" class="logo" routerLink="/home">Insurance Quotes</a>
+      <nav>
+        <ul>
+          <li><a href="#" routerLink="/home">Quotes</a></li>
+          <li><a href="#" routerLink="/settings">Settings</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <body>
+    <form class="healthForm">
+      <!-- What values do we need to have?  -->
+  
+      <!-- DOB, Weight, Height,  Gender, Uses Tobacco, State(derived from zip), current Year-->
+      <h5>How old are you (years)?</h5>
+      <input
+        class="age"
+        type="number"
+        align="center"
+        placeholder="Age"
+        [(ngModel)]="age"
+        [ngModelOptions]="{standalone: true}"
+      />
+      <h5>What is your yearly income?</h5>
+      <br>
+      <input
+        class="income"
+        type="number"
+        align="center"
+        placeholder="Income"
+        [(ngModel)]="income"
+        [ngModelOptions]="{standalone: true}"
+      />
+      <br />
+  
+      <h5>What is your gender?</h5>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label><br>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label><br>
+  
+      <h5>Are you pregnant?</h5>
+      <input type="radio" id="Yes" name="pregnant" value="True">
+      <label for="Yes">Yes</label><br>
+      <input type="radio" id="No" name="pregnant" value="False">
+      <label for="No">No</label><br>
+  
+      <h5>Are you a parent?</h5>
+      <input type="radio" id="Yes" name="parent" value="True">
+      <label for="Yes">Yes</label><br>
+      <input type="radio" id="No" name="parent" value="False">
+      <label for="No">No</label><br>
+  
+      <h5>What is your your expected insurance utilization level?</h5>
+      <input type="radio" id="Low" name="utilization-level" value="Low">
+      <label for="Low">Low</label><br>
+      <input type="radio" id="Medium" name="utilization-level" value="Medium">
+      <label for="Medium">Medium</label><br>
+      <input type="radio" id="High" name="utilization-level" value="High">
+      <label for="High">High</label> 
+      <br />
+  
+      <h5>Do you use tobacco?</h5>
+      <input type="radio" id="Yes" name="tobacco" value="True">
+      <label for="Yes">Yes</label><br>
+      <input type="radio" id="No" name="tobacco" value="False">
+      <label for="No">No</label><br>
+      
+      
+      
+  
+      <br />
+      <input
+        class="submit"
+        type="button"
+        name="button"
+        align="center"
+        value="Submit"
+      />
+    </form>
+  </body>

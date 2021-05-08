@@ -1,0 +1,41 @@
+<!-- credits for login page to https://speckyboy.com/login-pages-html5-css/*/
+-->
+<!-- here is a comment-->
+
+<!-- this is anoth comment -->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign in</title>
+  </head>
+  
+  <div class="main">
+    <p class="sign" align="center">Sign In Below!</p>
+    <form class="form1">
+      <input
+        class="un "
+        type="text"
+        align="center"
+        placeholder="Username"
+        [(ngModel)]="username"
+        [ngModelOptions]="{standalone: true}"
+      />
+      <input
+        class="pass"
+        type="password"
+        align="center"
+        placeholder="Password"
+        [(ngModel)]="password"
+        [ngModelOptions]="{standalone: true}"
+      />
+      <br />
+      <input
+        class="submit"
+        type="button"
+        name="button"
+        align="center"
+        value="Submit"
+        (click)="submitForm()"
+      />
+    </form>
+  </div>
