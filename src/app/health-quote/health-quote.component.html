@@ -69,7 +69,11 @@
       <input type="radio" id="No" name="tobacco" value="False">
       <label for="No">No</label><br>
       
-      
+      <div>
+        <h1>
+          {{result}}
+        </h1>
+      </div>
       
   
       <br />
@@ -79,6 +83,7 @@
         name="button"
         align="center"
         value="Submit"
+        (click)="submitForm()"
       />
     </form>
   </body>

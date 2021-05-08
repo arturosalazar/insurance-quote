@@ -18,8 +18,14 @@ export class HealthQuoteComponent implements OnInit {
   uses_tobacco: boolean;
   gender; //enum - Male or Female
   utilization_level; //enum Low, Medium, or High
+  result:string = "";
 
   constructor() {}
 
   ngOnInit() {}
+
+  submitForm(){
+    //Initial Testing - want to make sure we can get values when they've been submitted 
+    this.result = "" + this.age + " " + this.utilization_level;
+  }
 }
