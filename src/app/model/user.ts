@@ -13,7 +13,7 @@ export class User {
     isParent: boolean;
     isPregnant: boolean;
     uses_tobacco: boolean;
-    gender; //enum - Male or Female
+    gender; //enum - "male" or "female"
     health_utilization; //enum Low, Medium, or High
 
     // auto
@@ -30,6 +30,90 @@ export class User {
         this.quoteType = quoteType;
         this.zipcode = zipcode;
     }
+
+  setAge(age:number){
+    this.age = age;
+  }
+
+  setZipcode(zipcode:number){
+    this.zipcode = zipcode;
+  }
+
+  setState(age:number){
+    this.age = age;
+  }
+
+  setMarket(market:string){
+    this.market = market;
+  }
+
+  setIncome(income:number){
+    this.income = income;
+  }
+
+  setIsParent(isParent:boolean){
+    this.isParent = isParent;
+  }
+
+  setIsPregnant(isPregnant:boolean){
+    this.isPregnant = isPregnant;
+  }
+  
+  setUsesTobacco(uses_tobacco:boolean){
+    this.uses_tobacco = uses_tobacco;
+  }
+
+  setGender(gender){
+    this.gender = gender;
+  }
+
+  setHealthUtilizationLevel(health_utilization){
+    this.health_utilization = health_utilization;
+  }
+
+  getQuoteType(){
+      return this.quoteType;
+  }
+
+  getAge(){
+    return this.age
+  }
+
+  getZipcode(){
+    return this.zipcode
+  }
+
+  getState(){
+    return this.age;
+  }
+
+  getMarket(){
+    return this.market;
+  }
+
+  getIncome(){
+    return this.income;
+  }
+
+  getIsParent(){
+    return this.isParent;
+  }
+
+  getIsPregnant(){
+    return this.isPregnant;
+  }
+  
+  getUsesTobacco(){
+    return this.uses_tobacco;
+  }
+
+  getGender(){
+    return this.gender;
+  }
+
+  getHealthUtilizationLevel(){
+    return this.health_utilization;
+  }
 
 }
 

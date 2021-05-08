@@ -38,36 +38,36 @@
       <br />
   
       <h5>What is your gender?</h5>
-      <input type="radio" id="male" name="gender" value="male">
+      <input type="radio" id="male" name="gender" value="male" [(ngModel)]="gender">
       <label for="male">Male</label><br>
-      <input type="radio" id="female" name="gender" value="female">
+      <input type="radio" id="female" name="gender" value="female" [(ngModel)]="gender">
       <label for="female">Female</label><br>
   
       <h5>Are you pregnant?</h5>
-      <input type="radio" id="Yes" name="pregnant" value="True">
+      <input type="radio" id="Yes" name="pregnant" value="True" [(ngModel)]="isPregnant">
       <label for="Yes">Yes</label><br>
-      <input type="radio" id="No" name="pregnant" value="False">
+      <input type="radio" id="No" name="pregnant" value="False" [(ngModel)]="isPregnant">
       <label for="No">No</label><br>
   
       <h5>Are you a parent?</h5>
-      <input type="radio" id="Yes" name="parent" value="True">
+      <input type="radio" id="Yes" name="parent" value="True" [(ngModel)]="isParent">
       <label for="Yes">Yes</label><br>
-      <input type="radio" id="No" name="parent" value="False">
+      <input type="radio" id="No" name="parent" value="False" [(ngModel)]="isParent">
       <label for="No">No</label><br>
   
       <h5>What is your your expected insurance utilization level?</h5>
-      <input type="radio" id="Low" name="utilization-level" value="Low">
+      <input type="radio" id="Low" name="utilization-level" value="Low" [(ngModel)]="health_utilization">
       <label for="Low">Low</label><br>
-      <input type="radio" id="Medium" name="utilization-level" value="Medium">
+      <input type="radio" id="Medium" name="utilization-level" value="Medium" [(ngModel)]="health_utilization">
       <label for="Medium">Medium</label><br>
-      <input type="radio" id="High" name="utilization-level" value="High">
+      <input type="radio" id="High" name="utilization-level" value="High" [(ngModel)]="health_utilization">
       <label for="High">High</label> 
       <br />
   
       <h5>Do you use tobacco?</h5>
-      <input type="radio" id="Yes" name="tobacco" value="True">
+      <input type="radio" id="Yes" name="tobacco" value="True" [(ngModel)]="uses_tobacco">
       <label for="Yes">Yes</label><br>
-      <input type="radio" id="No" name="tobacco" value="False">
+      <input type="radio" id="No" name="tobacco" value="False" [(ngModel)]="uses_tobacco">
       <label for="No">No</label><br>
       
       <div>
