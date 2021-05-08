@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
+import { User } from "../model/user";
 
 @Component({
   selector: "app-health-quote",
@@ -20,9 +21,13 @@ export class HealthQuoteComponent implements OnInit {
   utilization_level; //enum Low, Medium, or High
   result:string = "";
 
+  @Input()
+  user: User;
+
   constructor() {}
 
   ngOnInit() {}
+
 
   submitForm(){
     //Initial Testing - want to make sure we can get values when they've been submitted 

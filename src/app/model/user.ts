@@ -1,7 +1,7 @@
 
 
-export interface User {
-    quoteType: string; //Auto, Health, or AutoAndHealth
+export class User {
+    quoteType: string; //"health", "auto", "health-and-auto"
     // health
     age: number; //Must be an integer
     zipcode: number; //To be retrieved from prev component
@@ -25,6 +25,12 @@ export interface User {
     safety; // passive restraint system, anti-lock brakes, airbags
     infractions: boolean; // do they have infractions on their driving record
     auto_utilization; //enum Low, Medium, or High
+
+    constructor(quoteType:string, zipcode: number){
+        this.quoteType = quoteType;
+        this.zipcode = zipcode;
+    }
+
 }
 
 
