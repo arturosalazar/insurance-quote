@@ -1,0 +1,130 @@
+<header>
+    <div class="container">
+      <a href="#" class="logo" routerLink="/home">Insurance Quotes</a>
+      <nav>
+        <ul>
+          <li><a href="#" routerLink="/home">Quotes</a></li>
+          <li><a href="#" routerLink="/settings">Settings</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <body>
+    <form class="autoForm">
+      <!-- What values do we need to have?  -->
+  
+      <!-- Car make, model, year, Vehicle Identification Number (VIN), Safety features, annual miles driven,-->
+      <!-- address, driving record-->
+  
+      <h5>How old are you (years)?</h5>
+      <input
+        class="age"
+        type="number"
+        align="center"
+        placeholder="Age"
+        [(ngModel)]="age"
+        [ngModelOptions]="{standalone: true}"
+      />
+      <h5>What is the make of your car?</h5>
+      <br>
+      <input
+        class="make"
+        type="string"
+        align="center"
+        placeholder="Make"
+        [(ngModel)]="make"
+        [ngModelOptions]="{standalone: true}"
+      />
+      <br />
+  
+      <h5>What is the car model?</h5>
+      <br>
+      <input
+        class="model"
+        type="string"
+        align="center"
+        placeholder="Model"
+        [(ngModel)]="model"
+        [ngModelOptions]="{standalone: true}"
+      />
+      <br />
+  
+      <h5>What is the car year?</h5>
+      <br>
+      <input
+        class="year"
+        type="string"
+        align="center"
+        placeholder="Year"
+        [(ngModel)]="year"
+        [ngModelOptions]="{standalone: true}"
+      />
+      <br />
+  
+      <h5>Enter the Vehicle Identification Number (VIN).</h5>
+      <br>
+      <input
+        class="vin"
+        type="string"
+        align="center"
+        placeholder="Vin"
+        [(ngModel)]="vin"
+        [ngModelOptions]="{standalone: true}"
+      />
+      <br />
+  
+      <h5>How many miles do you drive on this vehicle per year?</h5>
+      <br>
+      <input
+        class="miles"
+        type="number"
+        align="center"
+        placeholder="Miles"
+        [(ngModel)]="miles"
+        [ngModelOptions]="{standalone: true}"
+      />
+      <br />
+  
+      <h5>What is your gender?</h5>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label><br>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label><br>
+  
+      <h5>What safety features does the car have?</h5>
+      <input type="checkbox" id="passive-restraint" name="safety" value="False">
+      <label for="passive-restraint">Passive Restraint System</label><br>
+      <input type="checkbox" id="antilock-brakes" name="safety" value="False">
+      <label for="antilock-brakes">Anti-Lock Brakes</label><br>
+      <input type="checkbox" id="airbags" name="safety" value="True">
+      <label for="airbags">Airbags</label><br>
+  
+      <h5>Do you have any infractions on your driving record?</h5>
+      <input type="radio" id="Yes" name="infractions" value="False">
+      <label for="Yes">Yes</label><br>
+      <input type="radio" id="No" name="infractions" value="True">
+      <label for="No">No</label><br>
+  
+      <h5>What is your your expected insurance utilization level?</h5>
+      <input type="radio" id="Low" name="utilization-level" value="Low">
+      <label for="Low">Low</label><br>
+      <input type="radio" id="Medium" name="utilization-level" value="Medium">
+      <label for="Medium">Medium</label><br>
+      <input type="radio" id="High" name="utilization-level" value="High">
+      <label for="High">High</label> 
+      <br />
+  
+      
+      
+  
+      <br />
+      <input
+        class="submit"
+        type="button"
+        name="button"
+        align="center"
+        value="Submit"
+      />
+    </form>
+  </body>

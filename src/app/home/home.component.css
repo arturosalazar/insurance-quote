@@ -1,0 +1,47 @@
+header {
+    background: linear-gradient(to right, #9c27b0, #e040fb);
+    padding: 1em 0;
+  }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a.logo {
+    font-weight: bold;
+  }
+  
+  nav {
+    float: right;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  nav ul li a {
+    padding: 1em;
+  }
+  
+  nav ul li a:hover {
+    background: #9c27b0;
+  }
+  
+  h1 {
+    margin-top: 2em;
+  }
+  
+  .err{
+    color: red;
+    font-size: 13px;
+  }
