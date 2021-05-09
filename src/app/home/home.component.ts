@@ -1,4 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { QuoteUserService } from './../service/quote-user.service';
+import { User } from './../model/user';
+import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
 import { HttpService } from "../http.service";
 import { Router } from "@angular/router";
 
@@ -8,12 +10,18 @@ import { Router } from "@angular/router";
   styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
+  @Output()
+  user:User;
+
   insuranceType: string = "";
   zipcode: number = 0;
   noQuoteErrorText: string = "";
   wrongZipError: string = "";
 
-  constructor(private route: Router) {}
+  @Output()
+  userEmitter = new EventEmitter();
+
+  constructor(private route: Router, private quoteUserService:QuoteUserService) {}
 
   ngOnInit() {}
 
@@ -44,6 +52,14 @@ export class HomeComponent implements OnInit {
     this.wrongZipError = "";
 
     if (this.insuranceType != "" && this.validateZip(this.zipcode) != false) {
+      //create user 
+      this.user = new User(this.insuranceType, this.zipcode);
+      console.log(this.user);
+
+      this.quoteUserService.setUser(this.user);
+      //emit user to insurance quote component
+      //this.userEmitter.emit(this.user);
+      
       this.route.navigate(["/" + this.insuranceType]);
     } else {
       if (this.insuranceType == "") {

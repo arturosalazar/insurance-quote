@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { User } from './model/user';
+
 /*
 var models = require("../../models"); //place on top of the file
 models.sequelize.sync().then(function() {
@@ -7,12 +9,18 @@ models.sequelize.sync().then(function() {
  });
 });
 */
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
+
+
 export class AppComponent {
   title = 'insurance-quotes';
+
 }
 

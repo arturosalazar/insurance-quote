@@ -1,4 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { QuoteUserService } from './../service/quote-user.service';
+import { Component, Input, OnInit } from "@angular/core";
+import { User } from "../model/user";
 
 @Component({
   selector: "app-health-quote",
@@ -17,15 +19,24 @@ export class HealthQuoteComponent implements OnInit {
   isPregnant: boolean;
   uses_tobacco: boolean;
   gender; //enum - Male or Female
-  utilization_level; //enum Low, Medium, or High
+  health_utilization; //enum Low, Medium, or High
   result:string = "";
 
-  constructor() {}
+  constructor(private quoteUserService: QuoteUserService) {}
 
   ngOnInit() {}
 
+
   submitForm(){
     //Initial Testing - want to make sure we can get values when they've been submitted 
-    this.result = "" + this.age + " " + this.utilization_level;
+    this.quoteUserService.setAge(this.age);
+    this.quoteUserService.setIncome(this.income);
+    this.quoteUserService.setGender(this.gender);
+    this.quoteUserService.setIsPregnant(this.isPregnant);
+    this.quoteUserService.setIsParent(this.isParent);
+    this.quoteUserService.setHealthUtilizationLevel(this.health_utilization);
+    this.quoteUserService.setUsesTobacco(this.uses_tobacco);
+    
+    console.log(this.quoteUserService.user);
   }
 }
