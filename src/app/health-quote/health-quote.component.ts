@@ -36,7 +36,11 @@ export class HealthQuoteComponent implements OnInit {
     this.quoteUserService.setIsParent(this.isParent);
     this.quoteUserService.setHealthUtilizationLevel(this.health_utilization);
     this.quoteUserService.setUsesTobacco(this.uses_tobacco);
+
+    this.quoteUserService.createHealthInsQuote();
     
     console.log(this.quoteUserService.user);
+
+    console.log(this.quoteUserService.insuranceQuote)
   }
 }

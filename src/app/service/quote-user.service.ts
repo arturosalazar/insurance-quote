@@ -1,3 +1,4 @@
+import { InsQuote } from './../model/insQuote';
 import { User } from './../model/user';
 import { Injectable } from '@angular/core';
 
@@ -8,10 +9,18 @@ export class QuoteUserService {
 
   user:User;
 
+  //contain the current quote
+  insuranceQuote:InsQuote;
+
   constructor() { }
 
-  calculateHealthIns(){
-    return 
+  createHealthInsQuote(){
+    this.insuranceQuote = new InsQuote(this.user);
+    this.insuranceQuote.updateQuote(this.user);
+  }
+
+  updateHealthInsQuote(){
+    this.insuranceQuote.updateQuote(this.user);
   }
 
   setUser(user:User){
@@ -28,35 +37,35 @@ export class QuoteUserService {
   }
 
   setState(age:number){
-    this.user.age = age;
+    this.user.setAge(age);
   }
 
   setMarket(market:string){
-    this.user.market = market;
+    this.user.setMarket(market);
   }
 
   setIncome(income:number){
-    this.user.income = income;
+    this.user.setIncome(income);
   }
 
   setIsParent(isParent:boolean){
-    this.user.isParent = isParent;
+    this.user.setIsParent(isParent);
   }
 
   setIsPregnant(isPregnant:boolean){
-    this.user.isPregnant = isPregnant;
+    this.user.setIsPregnant(isPregnant);
   }
   
   setUsesTobacco(uses_tobacco:boolean){
-    this.user.uses_tobacco = uses_tobacco;
+    this.user.setUsesTobacco(uses_tobacco);
   }
 
   setGender(gender){
-    this.user.gender = gender;
+    this.user.setGender(gender);
   }
 
   setHealthUtilizationLevel(health_utilization){
-    this.user.health_utilization = health_utilization;
+    this.user.setHealthUtilizationLevel(health_utilization);
   }
 
   getQuoteType(){
