@@ -5,21 +5,26 @@
         <ul>
           <li><a href="#" routerLink="/home">Quotes</a></li>
           <li><a href="#" routerLink="/settings">Settings</a></li>
+          <li><a href="#" routerLink="/">Logout</a></li>
         </ul>
       </nav>
     </div>
   </header>
   
   <body>
-    <div class="healthQuote" (click)="setHealth()">Health Quote</div>
-    <div class="autoQuote" (click)="setAuto()">Auto Quote</div>
+    <h2>Choose a Quote and Select your Zip Code</h2>
+    <br>
+    <h3>Quote:</h3>
+    <div class="healthQuote" (click)="setHealth()"><span class="quoteOption">Health Quote</span></div>
+    <div class="autoQuote" (click)="setAuto()"><span class="quoteOption">Auto Quote</span></div>
     <div class="healthAndAutoQuote" (click)="setHealthAndAuto()">
-      Health and Auto Quote
+      <span class="quoteOption">Health and Auto Quote</span>
     </div>
     <div class="textError1 err">{{noQuoteErrorText}}</div>
   
     <br>
     <div class="selection">You have selected: {{insuranceType}}</div>
+    <h3>Zipcode:</h3>
     <p> Enter your zip code below. </p>
     <div class="textError2 err">{{wrongZipError}}</div>
   

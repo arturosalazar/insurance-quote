@@ -36,10 +36,6 @@ header {
   nav ul li a:hover {
     background: #9c27b0;
   }
-
-  .quoteOption:hover{
-    background: #9c27b0;
-  }
   
   h1 {
     margin-top: 2em;

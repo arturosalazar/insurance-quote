@@ -57,8 +57,6 @@ export class HomeComponent implements OnInit {
       console.log(this.user);
 
       this.quoteUserService.setUser(this.user);
-      //emit user to insurance quote component
-      //this.userEmitter.emit(this.user);
       
       this.route.navigate(["/" + this.insuranceType]);
     } else {

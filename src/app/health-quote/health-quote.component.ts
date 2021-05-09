@@ -1,6 +1,8 @@
 import { QuoteUserService } from './../service/quote-user.service';
 import { Component, Input, OnInit } from "@angular/core";
 import { User } from "../model/user";
+import { Router } from "@angular/router";
+
 
 @Component({
   selector: "app-health-quote",
@@ -22,7 +24,7 @@ export class HealthQuoteComponent implements OnInit {
   health_utilization; //enum Low, Medium, or High
   result:string = "";
 
-  constructor(private quoteUserService: QuoteUserService) {}
+  constructor(private quoteUserService: QuoteUserService, private route: Router) {}
 
   ngOnInit() {}
 
@@ -42,5 +44,7 @@ export class HealthQuoteComponent implements OnInit {
     console.log(this.quoteUserService.user);
 
     console.log(this.quoteUserService.insuranceQuote)
+
+    this.route.navigate(['/display-quote']);
   }
 }

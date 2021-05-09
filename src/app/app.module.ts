@@ -11,6 +11,7 @@ import { HttpClient, HttpHandler } from "@angular/common/http";
 import { HealthQuoteComponent } from "./health-quote/health-quote.component";
 import { AutoQuoteComponent } from "./auto-quote/auto-quote.component";
 import { HealthAndAutoComponent } from "./health-and-auto/health-and-auto.component";
+import { DisplayQuoteComponent } from './display-quote/display-quote.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { HealthAndAutoComponent } from "./health-and-auto/health-and-auto.compon
       { path: "home", component: HomeComponent },
       { path: "health", component: HealthQuoteComponent },
       { path: "auto", component: AutoQuoteComponent },
-      { path: "health-and-auto", component: HealthAndAutoComponent }
+      { path: "health-and-auto", component: HealthAndAutoComponent },
+      { path: "display-quote", component: DisplayQuoteComponent }
     ])
   ],
   declarations: [
@@ -30,7 +32,8 @@ import { HealthAndAutoComponent } from "./health-and-auto/health-and-auto.compon
     HomeComponent,
     HealthQuoteComponent,
     AutoQuoteComponent,
-    HealthAndAutoComponent
+    HealthAndAutoComponent,
+    DisplayQuoteComponent
   ],
   providers: [HttpService, HttpClient],
   bootstrap: [AppComponent]
