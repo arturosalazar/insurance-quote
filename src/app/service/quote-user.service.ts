@@ -109,7 +109,7 @@ export class QuoteUserService {
   }
 
   getHealthUtilizationLevel(){
-    return this.getHealthUtilizationLevel();
+    return this.user.getHealthUtilizationLevel();
   }
 
 

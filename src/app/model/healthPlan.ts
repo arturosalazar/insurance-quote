@@ -5,7 +5,7 @@ export class HealthPlan {
     
     planType:string; //high deductible, low premiums; low deductible, high premium; bare minimum coverage
     age:number;
-    healthutilization:string 
+    healthutilization:string;s 
     usesTobacco:boolean;
 
     BASE_RATE = 374.00;
@@ -47,7 +47,7 @@ export class HealthPlan {
                 healthUtilizationModifier = .95;
                 break;
             }
-            case "Medium": {
+            case "Med": {
                 healthUtilizationModifier = 1;
                 break;
             }
@@ -56,15 +56,17 @@ export class HealthPlan {
                 break;
             }
         }
-
+        
         //Smoker premium
         if(this.usesTobacco == true){
+            
             premium = premium * 1.50
         }
 
         if(this.planType == "budget-plan"){
             premium = premium * .65;
         }
+        console.log("calcPremium : ", premium);
 
         return premium;
     }
@@ -89,7 +91,8 @@ export class HealthPlan {
             }
         }
 
-        return deductible * deductibleMultiplier ;
+        deductible *= deductibleMultiplier;
+        return deductible;
     }
 
     calcOutOfPocket(){
@@ -111,7 +114,7 @@ export class HealthPlan {
             }
         }
 
-        return outOfPocket * outOfPocketMultiplier;
+        return outOfPocket *= outOfPocketMultiplier;
     }
 
 

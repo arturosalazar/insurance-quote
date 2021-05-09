@@ -15,14 +15,55 @@
   <h2>Insurance Quotes </h2>
 
   <h3>Low Deductible, High Premium</h3>
-  
+  <h4>Premium: ${{lowDeductiblePlan.premium}}</h4>
+  <h4>Out of Pocket Max: ${{lowDeductiblePlan.outOfPockerMax}}</h4>
+  <h4>Deductible: ${{lowDeductiblePlan.deductible}}</h4>
+
 
   <h3>High Deductible, Low Premium</h3>
-
+  <h4>Premium: ${{highDeductiblePlan.premium}}</h4>
+  <h4>Out of Pocket Max: ${{highDeductiblePlan.outOfPockerMax}}</h4>
+  <h4>Deductible: ${{highDeductiblePlan.deductible}}</h4>
 
   <h3>BudgetOption</h3>
+  <h4>Premium: ${{highDeductiblePlan.premium}}</h4>
+  <h4>Out of Pocket Max: ${{highDeductiblePlan.outOfPockerMax}}</h4>
+  <h4>Deductible: ${{highDeductiblePlan.deductible}}</h4>
 
 
+  <h2>User Entries</h2>
+  <h3>Update your entries to see how your premiums change</h3>
 
-  <h5>User Entries</h5>
+  <form class="healthForm">
+      <h5>Age</h5>
+    <input
+      class="age"
+      type="number"
+      align="center"
+      placeholder={{age}}
+      (change) = "updateQuotesAge()"
+      (keyup.enter) = "updateQuotesAge()"
+      (blur) = "updateQuotesAge()"
+      [(ngModel)]="age"
+      [ngModelOptions]="{standalone: true}"
+    />
+    <br />
+  
+     <h5>Do you use tobacco?</h5>
+      <input type="radio" id="Yes" name="tobacco" value="1" [(ngModel)]="usesTobacco" (click)="updateQuotesUsesTobacco()">
+      <label for="Yes">Yes</label><br>
+      <input type="radio" id="No" name="tobacco" value="0" [(ngModel)]="usesTobacco" (click)="updateQuotesUsesTobacco()">
+      <label for="No">No</label><br>
+
+    <input
+      class="submit"
+      type="button"
+      name="button"
+      align="center"
+      value="Submit"
+      (click)="updateQuotes()"
+    />
+  </form>
+
+
 
